@@ -18,8 +18,7 @@ const get_image_path_1 = require("../utilities/get-image-path");
 describe('GET /', function () {
     it('respond with root endpoint', function () {
         return __awaiter(this, void 0, void 0, function* () {
-            const response = yield (0, supertest_1.default)(index_1.default)
-                .get('/').set('Accept', 'application/json');
+            const response = yield (0, supertest_1.default)(index_1.default).get('/').set('Accept', 'application/json');
             expect(response.status).toEqual(200);
         });
     });
@@ -27,22 +26,21 @@ describe('GET /', function () {
 describe('GET /images', function () {
     it('respond with images endpoint success', function () {
         return __awaiter(this, void 0, void 0, function* () {
-            const response = yield (0, supertest_1.default)(index_1.default)
-                .get('/images').set('Accept', 'application/json');
+            const response = yield (0, supertest_1.default)(index_1.default).get('/images').set('Accept', 'application/json');
             expect(response.status).toEqual(200);
         });
     });
     it('respond with images endpoint with filename is encenadaport', function () {
         return __awaiter(this, void 0, void 0, function* () {
-            const response = yield (0, supertest_1.default)(index_1.default)
-                .get('/images?filename=encenadaport').set('Accept', 'application/json');
+            const response = yield (0, supertest_1.default)(index_1.default).get('/images?filename=encenadaport').set('Accept', 'application/json');
             expect(response.status).toEqual(200);
         });
     });
     it('respond with images endpoint with filename is encenadaport, width is 300, height is 300', function () {
         return __awaiter(this, void 0, void 0, function* () {
             const response = yield (0, supertest_1.default)(index_1.default)
-                .get('/images?filename=encenadaport&width=300&height=300').set('Accept', 'application/json');
+                .get('/images?filename=encenadaport&width=300&height=300')
+                .set('Accept', 'application/json');
             expect(response.status).toEqual(200);
         });
     });

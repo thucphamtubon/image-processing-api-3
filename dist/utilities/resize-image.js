@@ -19,10 +19,7 @@ const resizeImage = (props) => __awaiter(void 0, void 0, void 0, function* () {
         const { inputBuffer, width, height, toFile } = props;
         if (!inputBuffer || !width || !height || !toFile)
             return false;
-        yield (0, sharp_1.default)(inputBuffer)
-            .resize(width, height)
-            .toFormat('jpeg')
-            .toFile(toFile);
+        yield (0, sharp_1.default)(inputBuffer).resize(width, height).toFormat('jpeg').toFile(toFile);
         return true;
     }
     catch (e) {

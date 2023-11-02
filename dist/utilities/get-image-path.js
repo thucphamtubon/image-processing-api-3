@@ -58,7 +58,7 @@ const getImagePath = (props) => __awaiter(void 0, void 0, void 0, function* () {
             inputBuffer: exports.fullSizeImagePath + '/' + props.filename + '.jpg',
             width: (0, convert_number_value_1.convertNumberValue)(props.width || ''),
             height: (0, convert_number_value_1.convertNumberValue)(props.height || ''),
-            toFile: exports.thumbnailImagePath + '/' + newFileName,
+            toFile: (exports.thumbnailImagePath + '/' + newFileName),
         });
     }
     try {
